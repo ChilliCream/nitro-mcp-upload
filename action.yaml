@@ -3,7 +3,7 @@ description: "Uploads MCP feature collections to the Nitro registry"
 author: "ChilliCream"
 branding:
   icon: "upload-cloud"
-  color: "purple"
+  color: "red"
 
 inputs:
   tag:
