@@ -16,7 +16,6 @@ A GitHub Action that uploads MCP feature collections to the Nitro registry.
     prompt-pattern:
       - ./mcp/prompts/**/*.json
     cloud-url: <cloud-url>
-    job-id: <job-id>
 ```
 
 ## Inputs
