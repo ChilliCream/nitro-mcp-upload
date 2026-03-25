@@ -1,0 +1,35 @@
+name: "Nitro MCP Upload"
+description: "Uploads MCP feature collections to the Nitro registry"
+author: "ChilliCream"
+branding:
+  icon: "upload-cloud"
+  color: "purple"
+
+inputs:
+  tag:
+    description: "The tag of the MCP feature collection version"
+    required: true
+  mcp-feature-collection-id:
+    description: "The ID of the MCP Feature Collection"
+    required: true
+  api-key:
+    description: "API key for authentication"
+    required: true
+    secret: true
+  prompt-pattern:
+    description: "One or more file patterns to locate MCP prompt definition files (*.json)"
+    required: false
+  tool-pattern:
+    description: "One or more file patterns to locate MCP tool definition files (*.graphql)"
+    required: false
+  cloud-url:
+    description: "The URL of the Nitro registry"
+    required: false
+  job-id:
+    description: "The ID of the current job"
+    required: false
+    default: ${{ job.check_run_id }}
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
