@@ -11,9 +11,9 @@ A GitHub Action that uploads MCP feature collections to the Nitro registry.
     mcp-feature-collection-id: <mcp-feature-collection-id>
     api-key: <api-key>
     # Optional
-    tool-pattern:
+    tool-patterns:
       - ./mcp/tools/**/*.graphql
-    prompt-pattern:
+    prompt-patterns:
       - ./mcp/prompts/**/*.json
     cloud-url: <cloud-url>
 ```
@@ -25,10 +25,10 @@ A GitHub Action that uploads MCP feature collections to the Nitro registry.
 | `tag`                       | Yes      | The tag of the MCP feature collection version                   |
 | `mcp-feature-collection-id` | Yes      | The ID of the MCP Feature Collection                            |
 | `api-key`                   | Yes      | API key for authentication                                      |
-| `tool-pattern`              | No       | One or more file patterns to locate MCP tool definition files   |
-| `prompt-pattern`            | No       | One or more file patterns to locate MCP prompt definition files |
+| `tool-patterns`             | No       | One or more file patterns to locate MCP tool definition files   |
+| `prompt-patterns`           | No       | One or more file patterns to locate MCP prompt definition files |
 | `cloud-url`                 | No       | The URL of the Nitro registry                                   |
 
-At least one of `prompt-pattern` or `tool-pattern` should be provided.
+At least one of `prompt-patterns` or `tool-patterns` should be provided.
 
 If you self-host Nitro or use a dedicated hosted instance, you can specify the `cloud-url` input to point to your instance.

@@ -21,11 +21,11 @@ async function executeCommand(): Promise<void> {
       sourceMetadataInput ?? JSON.stringify(getSourceMetadata(jobId));
     const cloudUrl = core.getInput("cloud-url") || null;
 
-    const promptPatterns = core.getMultilineInput("prompt-pattern");
-    const toolPatterns = core.getMultilineInput("tool-pattern");
+    const promptPatterns = core.getMultilineInput("prompt-patterns");
+    const toolPatterns = core.getMultilineInput("tool-patterns");
 
     if (promptPatterns.length === 0 && toolPatterns.length === 0) {
-      core.setFailed("At least one of prompt-pattern or tool-pattern must be provided.");
+      core.setFailed("At least one of prompt-patterns or tool-patterns must be provided.");
       return;
     }
 

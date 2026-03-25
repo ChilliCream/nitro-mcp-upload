@@ -16,10 +16,10 @@ inputs:
     description: "API key for authentication"
     required: true
     secret: true
-  prompt-pattern:
+  prompt-patterns:
     description: "One or more file patterns to locate MCP prompt definition files (*.json)"
     required: false
-  tool-pattern:
+  tool-patterns:
     description: "One or more file patterns to locate MCP tool definition files (*.graphql)"
     required: false
   cloud-url:
